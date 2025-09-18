@@ -1,5 +1,16 @@
 ---
 
+const pageTitle = "Acerca de mi";
+
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Escritor técnico",
+  hobbies: ["fotografia", "observación de aves", "peñarol"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
+
 ---
 
 <a href="/">Inicio</a>
@@ -14,10 +25,10 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Acerca de mi</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<h1>Soy un pana bien pepa</h1>
-        <p>Estoy realizando el tutorial de astro de la pagina de astro</p>
+        <h1>{pageTitle}</h1>
+        <p>Hola. mi nombre es {identity.firstName} vivo en. {identity.country} y me dedico a {identity.occupation} y mis hobbies favoritos son. {identity.hobbies.join(",  ")  }</p>
 	</body>
 </html>
